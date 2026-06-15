@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5
+        uses: actions/checkout@4
       - name: Set up python
         uses: actions/set-up-python@6
         with:
