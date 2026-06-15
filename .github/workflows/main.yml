@@ -10,6 +10,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@5
-      - run: python app
-      
-  
+      - name: Set up python
+        uses: actions/set-up-python@6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run script
+        run: python app.py
